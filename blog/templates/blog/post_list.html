@@ -2,6 +2,14 @@
     <head>
         <title>Msjuliaalice's Blog</title>
     </head>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <H1>Msjuliaalice's Blog</H1>
+    {% for post in posts %}
+    <div>
+        <p>
+            published: {{ post.published_date }}
+        </p>
+        <h1><a href = "">{{post.title}}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
 </html>
